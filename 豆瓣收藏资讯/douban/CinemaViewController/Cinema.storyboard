@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="V99-M5-5P1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Jzb-lw-bzd">
+            <objects>
+                <navigationController id="V99-M5-5P1" customClass="NavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1LF-cJ-kTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dMm-Si-TU3" kind="relationship" relationship="rootViewController" id="fE8-OH-5Ss"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idg-3d-hde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-267" y="255"/>
+        </scene>
+        <!--Cinema View Controller-->
+        <scene sceneID="st4-RK-mmL">
+            <objects>
+                <viewController id="dMm-Si-TU3" customClass="CinemaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PfV-VT-L0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="pmh-2p-RXw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzk-md-3rs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fsE-OA-LG2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dMm-Si-TU3" id="DvP-B3-gDy"/>
+                                    <outlet property="delegate" destination="dMm-Si-TU3" id="PyL-Jt-WmZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fsE-OA-LG2" firstAttribute="leading" secondItem="fzk-md-3rs" secondAttribute="leading" id="U0u-UE-7iN"/>
+                            <constraint firstItem="fsE-OA-LG2" firstAttribute="top" secondItem="fzk-md-3rs" secondAttribute="top" id="j83-pm-Ko5"/>
+                            <constraint firstItem="pmh-2p-RXw" firstAttribute="top" secondItem="fsE-OA-LG2" secondAttribute="bottom" id="mrd-OJ-AX1"/>
+                            <constraint firstAttribute="trailing" secondItem="fsE-OA-LG2" secondAttribute="trailing" id="yz5-qY-1l5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iID-lh-mO4"/>
+                    <connections>
+                        <outlet property="tbView" destination="fsE-OA-LG2" id="HSP-ja-Y0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LmD-K9-T5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="255"/>
+        </scene>
+    </scenes>
+</document>
